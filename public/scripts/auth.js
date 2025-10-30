@@ -1,17 +1,30 @@
 import { auth } from "./firebase.js";
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 
-const email = document.getElementById("email");
-const password = document.getElementById("password");
 const loginBtn = document.getElementById("loginBtn");
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
 const errorMsg = document.getElementById("errorMsg");
 
 loginBtn.addEventListener("click", async () => {
-  errorMsg.textContent = "";
+  const email = emailInput.value.trim();
+  const password = passwordInput.value.trim();
+  errorMsg.textContent = "⏳ Signing in...";
+
+  if (!email || !password) {
+    errorMsg.textContent = "⚠️ Please fill in both email and password.";
+    return;
+  }
+
   try {
-    await signInWithEmailAndPassword(auth, email.value, password.value);
-    window.location.href = "dashboard.html";
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    errorMsg.textContent = "✅ Login successful! Redirecting...";
+    setTimeout(() => {
+      window.location.href = "dashboard.html";
+    }, 1200);
   } catch (err) {
-    errorMsg.textContent = "Invalid credentials or network error.";
+    errorMsg.textContent = `❌ Login failed: ${err.message}`;
   }
 });
+
+console.log("📢 Auth script loaded");
