@@ -66,15 +66,18 @@ a{color:inherit}
 .table td{padding:12px;border-bottom:1px solid rgba(255,255,255,0.02);color:#fff}
 .messages-list{display:flex;flex-direction:column;gap:12px}
 .message-item{padding:12px;border-radius:10px;background:linear-gradient(90deg,rgba(255,255,255,0.02),transparent);display:flex;flex-direction:column;gap:8px}
-
-/* forms */
 .product-form .row{display:flex;gap:12px;margin-bottom:12px}
 .product-form input, .product-form select{padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:#fff}
+.orders-grid {display: grid;gap: 1.5rem;grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));padding: 1rem;}
+.order-card {background: #fff;border-radius: 12px;padding: 1rem 1.25rem;box-shadow: 0 2px 8px rgba(0,0,0,0.1);transition: 0.25s ease;}
+.order-card:hover {transform: translateY(-4px);box-shadow: 0 4px 14px rgba(0,0,0,0.15);}
+.order-card .timestamp {font-size: 0.8rem;color: #777;margin-top: 0.5rem;}
 
-/* responsive */
+
 @media (max-width:900px){
   .sidebar{display:none}
   .main{padding:12px}
   .grid-3{grid-template-columns:1fr}
   .search input{width:120px}
 }
+
