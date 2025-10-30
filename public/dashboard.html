@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SweetBites Admin — Dashboard</title>
+  <link rel="stylesheet" href="scripts/admin.css">
+</head>
+<body class="admin-dashboard">
+  <div class="sidebar">
+    <div class="logo-row">
+      <div class="logo-mark"></div>
+      <div class="logo-text">SweetBites</div>
+    </div>
+
+    <nav class="nav">
+      <a href="dashboard.html" class="nav-item active">Overview</a>
+      <a href="products.html" class="nav-item">Products</a>
+      <a href="orders.html" class="nav-item">Orders</a>
+      <a href="messages.html" class="nav-item">Messages</a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button id="logoutBtn" class="btn ghost">Logout</button>
+    </div>
+  </div>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="search">
+        <input id="quickSearch" placeholder="Search orders, products..." />
+      </div>
+      <div class="top-actions">
+        <button id="refreshBtn" class="icon-btn">⟳</button>
+      </div>
+    </header>
+
+    <section class="container grid-3">
+      <div class="stat card stat-primary">
+        <div class="stat-title">Total Orders</div>
+        <div id="totalOrders" class="stat-number">—</div>
+      </div>
+
+      <div class="stat card stat-accent">
+        <div class="stat-title">Products</div>
+        <div id="totalProducts" class="stat-number">—</div>
+      </div>
+
+      <div class="stat card stat-olive">
+        <div class="stat-title">Unread Messages</div>
+        <div id="totalMessages" class="stat-number">—</div>
+      </div>
+    </section>
+
+    <section class="container recent card">
+      <h2>Recent Orders</h2>
+      <div id="recentList" class="list"></div>
+    </section>
+
+    <footer class="footer muted">© 2025 SweetBites • Dark Mode Deluxe</footer>
+  </div>
+
+  <script type="module" src="scripts/firebase.js"></script>
+  <script type="module" src="scripts/dashboard.js"></script>
+</body>
+</html>
