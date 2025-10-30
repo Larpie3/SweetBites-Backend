@@ -29,13 +29,19 @@
     <header class="topbar">
       <h1>Orders</h1>
       <div class="top-actions">
-        <input id="searchOrders" placeholder="🔍 Search orders..." />
+        <input id="searchOrders" placeholder="Search by name or email" />
       </div>
     </header>
 
     <section class="admin-section">
-      <div id="ordersLoader" class="loader"></div>
+      <h2>Active Orders</h2>
+      <div id="ordersLoader" class="loader">Loading orders...</div>
       <div id="ordersList" class="orders-grid"></div>
+
+      <details id="finishedOrdersSection" class="finished-orders">
+        <summary>Finished Orders</summary>
+        <div id="finishedOrdersList" class="orders-grid"></div>
+      </details>
     </section>
 
     <footer class="footer muted">© 2025 SweetBites • Admin Console</footer>
