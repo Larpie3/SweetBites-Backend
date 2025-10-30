@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SweetBites Admin — Messages</title>
+  <link rel="stylesheet" href="scripts/admin.css">
+</head>
+<body class="admin-dashboard">
+  <aside class="sidebar">
+    <div class="logo-row">
+      <div class="logo-mark"></div>
+      <div class="logo-text">SweetBites</div>
+    </div>
+
+    <nav class="nav">
+      <a href="dashboard.html" class="nav-item">Overview</a>
+      <a href="products.html" class="nav-item">Products</a>
+      <a href="orders.html" class="nav-item">Orders</a>
+      <a href="messages.html" class="nav-item active">Messages</a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button id="logoutBtn" class="btn ghost">Logout</button>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <h1>Messages</h1>
+    </header>
+
+    <section class="container card">
+      <div id="messagesList" class="messages-list"></div>
+    </section>
+
+    <footer class="footer muted">© 2025 SweetBites • Dark Mode Deluxe</footer>
+  </div>
+
+  <script type="module" src="scripts/firebase.js"></script>
+  <script type="module" src="scripts/messages.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+const firebaseConfig = {
+  apiKey: "AIzaSyCkxYnwFBOTO_vz6bkJJWM1tSatq4H6yeY",
+  authDomain: "sweetbites-admin-console.firebaseapp.com",
+  projectId: "sweetbites-admin-console",
+  storageBucket: "sweetbites-admin-console.firebasestorage.app",
+  messagingSenderId: "125142981711",
+  appId: "1:125142981711:web:7ad785732b705597069e3a"
+  measurementId: "G-HX5BYS56CT"
+};

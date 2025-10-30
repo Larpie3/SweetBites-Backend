@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SweetBites Admin — Login</title>
+  <link rel="stylesheet" href="scripts/admin.css">
+</head>
+<body class="admin-login">
+  <main class="card login-card">
+    <div class="brand">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M3 12c0-4 4-8 9-8s9 4 9 8-4 8-9 8S3 16 3 12z" fill="#F6C177"/>
+        <path d="M7.5 10.5a2.5 2.5 0 115 0 2.5 2.5 0 01-5 0z" fill="#FFF3E0"/>
+      </svg>
+      <h1>SweetBites Admin</h1>
+    </div>
+
+    <div class="login-form">
+      <label class="field">
+        <span class="label-text">Email</span>
+        <input id="email" type="email" placeholder="admin@sweetbites.com" />
+      </label>
+
+      <label class="field">
+        <span class="label-text">Password</span>
+        <input id="password" type="password" placeholder="••••••••" />
+      </label>
+
+      <div class="actions">
+        <button id="loginBtn" class="btn primary">Sign in</button>
+      </div>
+
+      <p id="errorMsg" class="muted"></p>
+    </div>
+
+    <footer class="login-footer muted">© 2025 SweetBites</footer>
+  </main>
+
+  <script type="module" src="scripts/firebase.js"></script>
+  <script type="module" src="scripts/auth.js"></script>
+</body>
+</html>
